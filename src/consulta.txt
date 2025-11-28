@@ -1,0 +1,1192 @@
+
+
+1. Listas de Funcionalidades
+
+Módulo 1: Gestión de Usuarios y Jugadores
+
+1.  **Creación y Gestión de Academias (Tenants)**:
+   *   Permitir crear nuevas academias de fútbol, cada una con su propia configuración y datos.
+   *   Activar o desactivar academias si ya no están en uso.
+2.  **Administración de Roles y Permisos**:
+   *   Definir diferentes tipos de usuarios (Administrador, Entrenador, Padre, Jugador)..
+   *   Asignar roles específicos a cada usuario para controlar a qué partes del sistema pueden acceder.
+3.  **Gestión de Cuentas de Usuario**:
+   *   Crear cuentas para el personal, entrenadores, padres y jugadores.
+   *   Permitir el inicio de sesión seguro usando su DNI y contraseña.
+   *   Opción para restablecer contraseñas si se olvidan.
+   *   Actualizar datos de contacto y estado de activación del usuario.
+4.  **Organización de Equipos**:
+   *   Crear y gestionar los equipos de cada academia, especificando su nombre, categoría y si es un equipo propio o externo.
+   *   Activar o desactivar equipos.
+5.  **Definición de Posiciones de Juego**:
+   *   Establecer las diferentes posiciones en el campo (ej. Delantero, Defensa Central, Portero), con sus abreviaturas y descripción.
+6.  **Ficha Completa de Jugadores**:
+   *   Registrar datos detallados de cada jugador: nombre, apellido, fecha de nacimiento, altura, peso, pie preferido, número de camiseta, contacto de emergencia.
+   *   Asignar jugadores a un equipo y a sus posiciones principal y secundaria.
+   *   Vincular a cada jugador con un "usuario padre/tutor" para notificaciones y seguimiento.
+   *   Indicar si el jugador es mayor de edad (para gestionar su propia cuenta).
+   *   Seguimiento del estado de pago de las cuotas del jugador.
+   *   Activar o desactivar a un jugador.
+   *   **Funcionalidad Clave**: Un buscador y filtros para encontrar rápidamente a cualquier jugador.
+
+### Módulo 2: Planificación de Tareas y Recursos
+
+1.  **Clasificación de Actividades (Tipos de Tarea)**:
+   *   Definir categorías para las tareas de entrenamiento (ej. Técnica, Física, Táctica), con una descripción y un color para identificarlas visualmente.
+2.  **Control de Inventario de Material Deportivo**:
+   *   Registrar todo el material disponible (ej. Conos, Balones Talla 5) con la cantidad total y disponible.
+   *   Indicar el estado del material (Disponible, En Mantenimiento, Baja).
+3.  **Biblioteca de Ejercicios y Tareas Reutilizables**:
+   *   Crear y guardar una biblioteca de ejercicios de entrenamiento con nombre, descripción, duración estimada, nivel de dificultad (Baja, Media, Alta).
+   *   Indicar qué materiales del inventario se necesitan para cada tarea y en qué cantidad.
+   *   Marcar tareas como "públicas" dentro de la academia para que otros entrenadores puedan usarlas.
+   *   Identificar al entrenador que creó cada tarea.
+
+### Módulo 3: Evaluación de Jugadores
+
+
+1.  **Definición Personalizada de Criterios de Evaluación (Atributos)**:
+   *   Crear atributos específicos para evaluar a los jugadores (ej. Velocidad, Pase Corto, Decisión).
+   *   Clasificar los atributos por tipo (Físico, Técnico, Mental).
+   *   Definir el tipo de escala para medir cada atributo (Numérica, Letras, Texto Libre) y su unidad (segundos, puntos).
+2.  **Registro Detallado de Evaluaciones**:
+   *   Realizar evaluaciones a los jugadores, registrando quién evaluó, la fecha, el tipo de evaluación (Inicial, Periódica, Final) y comentarios generales.
+   *   Para cada evaluación, registrar el valor obtenido por el jugador en cada atributo definido.
+   *   Añadir comentarios específicos para cada atributo evaluado.
+   *   Guardar evaluaciones como borrador o marcarlas como completadas.
+   *   **Funcionalidad Clave**: Un panel o "Dashboard" donde se visualice la evolución de un jugador en sus atributos a lo largo del tiempo.
+
+### Módulo 4: Sesiones y Seguimiento Diario:
+
+1.  **Creación y Gestión de Sesiones de Entrenamiento/Partido**:
+   *   Programar distintos tipos de sesiones (Entrenamiento, Partido, Fisioterapia, Teórica).
+   *   Asignar sesiones a un equipo.
+   *   Definir la fecha, hora, lugar, descripción, objetivos y estado (Planificada, En Curso, Completada).
+   *   Indicar quién creó la sesión y quién es el responsable actual.
+   *   **Funcionalidad Clave**: Copiar sesiones existentes para usarlas como plantilla y ahorrar tiempo.
+2.  **Organización de Tareas en la Sesión**:
+   *   Asignar tareas específicas de la "Biblioteca de Tareas" a cada sesión.
+   *   Definir el orden y la duración estimada de cada tarea dentro de la sesión.
+   *   Registrar la duración real de la tarea y notas de los entrenadores.
+   *   Indicar si una tarea es opcional y si se usó material no previsto.
+3.  **Control de Asistencia Rápido**:
+   *   Registrar la asistencia de cada jugador a una sesión (Presente, Ausente, Justificado, Tardanza).
+   *   Registrar la hora de llegada.
+   *   **Funcionalidad Clave**: Notificar automáticamente a los padres si un jugador está ausente (alerta configurable).
+4.  **Registro de Carga de Jugadores**:
+   *   Registrar la "carga" que supuso cada sesión para un jugador (duración real, RPE subjetivo, distancia recorrida, pulsaciones).
+   *   El sistema calculará automáticamente la carga total por sesión.
+   *   **Funcionalidad Clave**: Gráficos que muestren el historial y la evolución de la carga y el rendimiento de los jugadores.
+5.  **Delegación de Responsabilidades en Sesiones**:
+   *   Permitir a un entrenador delegar la responsabilidad de una sesión a otro entrenador.
+   *   Configurar qué permisos se otorgan al entrenador delegado (ej. modificar tareas, registrar asistencias).
+   *   Seguimiento del estado de la delegación (Activa, Aceptada, Rechazada).
+6.  **Asignación de Entrenadores a Sesiones**:
+   *   Asignar varios entrenadores a una sesión, especificando su rol (Responsable, Co-Entrenador, Asistente).
+   *   Los permisos se ajustarían automáticamente según el rol asignado.
+
+### Módulo 5: Partidos y Estadísticas Detalladas
+
+1.  **Calendario y Resultados de Partidos**:
+   *   Registrar todos los detalles de un partido: equipos local y visitante, una sesión vinculada, competencia (liga/torneo), jornada, árbitros, goles finales.
+   *   Seguimiento del estado del partido (Programado, En Juego, Finalizado) y minuto actual para partidos en vivo.
+   *   Registrar condiciones climáticas, asistencia de público e incidencias importantes.
+2.  **Gestión de Competencias (Ligas y Torneos)**:
+   *   Crear y gestionar diferentes competencias (Ligas, Torneos, Copas).
+   *   Especificar temporada, fechas de inicio y fin, sistema de puntos.
+   *   Seguimiento del estado de la competencia (En Curso, Finalizada).
+3.  **Estadísticas Individuales de Jugador por Partido**:
+   *   Registrar si un jugador fue titular o suplente, minutos jugados, goles, asistencias, tarjetas, remates, faltas, etc.
+   *   Registrar una valoración del entrenador y comentarios de rendimiento.
+   *   **Funcionalidad Clave**: El sistema calculará automáticamente porcentajes (ej. pases completados).
+4.  **Registro Cronológico de Eventos del Partido**:
+   *   Registrar eventos clave durante un partido: goles, tarjetas, cambios, penaltis.
+   *   Asociar el evento a uno o dos jugadores y un equipo.
+   *   Describir el evento y si fue decisivo.
+5.  **Plantillas de Alineación Reutilizables**:
+   *   Crear y guardar plantillas de alineación (ej. "4-4-2 Defensivo", "4-3-3 Ofensivo") con la formación y posiciones gráficas.
+   *   **Funcionalidad Clave**: Contador de usos de cada plantilla.
+6.  **Constructor Gráfico de Alineaciones**:
+   *   Crear la alineación para un partido arrastrando jugadores a un esquema visual del campo.
+   *   Asignar roles (Titular, Suplente) y posiciones específicas (Portero, Lateral Derecho).
+   *   Indicar al capitán.
+   *   Añadir minutos previstos e instrucciones especiales para cada jugador.
+
+### Módulo 6: Gestión Financiera y Notificaciones
+
+
+1.  **Gestión de Cuotas de Jugadores**:
+   *   Registrar cuotas para cada jugador (concepto, monto, fecha de vencimiento).
+   *   Seguimiento del estado de las cuotas (Pendiente, Pagada, Vencida, Anulada).
+   *   Registrar la fecha y método de pago, además de una referencia.
+2.  **Sistema de Alertas de Pago**:
+   *   Generar alertas automáticas cuando una cuota está vencida o próxima a vencer.
+   *   Indicar si la alerta ha sido vista por el administrador o por el padre del jugador.
+   *   Cambiar el estado de un jugador a "Desactivado por Cuota" si la situación lo requiere.
+
+2. Posibles flujos: 
+
+🎯 Flujo 1: "Carlos, el Director de Academia"
+Fase 1: Activación Inmediata de tu Academia
+Contacto Inicial
+"Nos contactas y en 24 horas tienes tu academia funcionando"
+Solicitud Rápida
+Te pones en contacto con nosotros por teléfono, email o web
+Nos compartes:
+Nombre de tu academia: "Academia Futbol Pro"
+Tus datos como administrador (nombre, DNI, email)
+Cantidad estimada de jugadores y equipos (solo para saber cuánto vamos a cobrar)
+Configuración Express por Nuestro Equipo
+En menos de 24 horas recibes un email con:
+ 
+Asunto: ¡Tu Academia Futbol Pro está lista!
+Hola Carlos,
+ 
+📱 URL del sistema: https://fuchibol.quantify.net.pe
+👤 Usuario admin: 12345678
+🔑 Contraseña temporal: AcademiaPro2024
+ 
+⚠️ Recomendamos cambiar la contraseña en el primer acceso
+Primer Acceso Inmediato
+Ingresas con las credenciales que te enviamos
+El sistema te guía para cambiar tu contraseña
+¡Ya estás dentro de tu panel de control!
+ 
+Fase 2: Personalización según tu Metodología
+Configuración de Tu Estilo de Juego
+"Adaptamos el sistema a tu forma de trabajar"
+Definir Posiciones de Juego
+Desde el panel admin, creas las posiciones que usas:
+Ejemplo para tu metodología 4-3-3:
+text
+➤ Portero
+➤ Defensa Lateral Derecho
+➤ Defensa Central
+➤ Defensa Lateral Izquierdo
+➤ Mediocentro Defensivo
+➤ Interior Derecho
+➤ Interior Izquierdo 
+➤ Extremo Derecho
+➤ Delantero Centro
+➤ Extremo Izquierdo
+Crear Estructura de Equipos
+Configuras tus equipos:
+ 
+🟢 Prebenjamín (Sub-8)
+🟡 Benjamín (Sub-10)
+🔵 Alevín (Sub-12)
+🔴 Infantil (Sub-14)
+🟣 Cadete (Sub-16)
+⚫ Juvenil (Sub-18)
+ 
+Fase 3: Incorporación de tu Equipo Humano
+Gestión de Usuarios Flexible
+"Tú decides quién accede y con qué permisos"
+Crear Cuentas para tu Cuerpo Técnico
+Desde el panel, añades a tus 4 entrenadores:
+➤ Entrenador Principal: Luis García (DNI: 87654321)
+➤ Asistente Técnico: Ana Martínez (DNI: 87654322)
+➤ Preparador Físico: Pedro Sánchez (DNI: 87654323)
+➤ Entrenador de Porteros: Marta López (DNI: 87654324)
+Entrega de Credenciales Personalizada
+Opción A: Les envías tú mismo las credenciales:
+Hola Entrenadorcito,
+ 
+Te hemos dado de alta en nuestro sistema de gestión:
+ 
+📱 URL: https://fuchibol.quantify.net.pe 
+👤 Usuario: 87654321
+🔑 Contraseña: Temporal123
+ 
+Al entrar podrás cambiar tu contraseña.
+ 
+Los Entrenadores Acceden por Primera Vez
+Reciben sus credenciales (por tu parte)
+Al primer acceso, el sistema les obliga a cambiar contraseña
+¡Listos para usar el sistema!
+ 
+Fase 4: Registro Masivo de Jugadores
+Inscripción Eficiente
+"60 jugadores registrados en tiempo récord"
+Creación de Fichas Completa
+Desde tu panel admin, accedes al módulo de jugadores
+Rellenas o importas datos esenciales:
+📋 Datos Básicos:
+- Nombre y apellidos
+- Fecha nacimiento
+- DNI (Si es mayor de edad se le crea su cuenta automáticamente)
+- Teléfono contacto
+- Foto (opcional)
+⚽ Datos Deportivos:
+- Equipo asignado (Juvenil A, Infantil B...)
+- Posición principal y secundaria
+- Pie preferido
+- Número de dorsal
+ 
+👨‍👩‍👧‍👦 Datos Familiares:
+- Padre/Madre/Tutor (dni se crea el usuario automáticamente si no existe)
+- Contacto de emergencia
+Asignación Automática de Usuarios Padres
+Por cada jugador menor de edad, el sistema crea automáticamente:
+Usuario para el padre/tutor con DNI proporcionado
+Contraseña temporal
+Vinculación automática con su hijo o hijos
+Comunicación a Familias
+Tú decides cómo entregar las credenciales:
+Opción 1: Imprimes credenciales y las entregas en persona(no creo)
+Opción 2: Envío masivo por whatsapp desde el sistema
+ 
+Fase 5: Conexión de las Familias
+Experiencia Padre/Madre desde el Día 1
+"Toda la información de sus hijos en su móvil"
+Primer Acceso de los Padres
+Reciben sus credenciales (dependiendo de la opción elegida)
+Pueden acceder:
+📱 App móvil (descargable desde stores cuando ya generé algo como para pagarle a play store)
+💻 Versión web desde cualquier navegador
+Configuración Inicial Obligatoria
+Al primer acceso:
+Cambio de contraseña obligatorio
+Confirmación de datos de contacto
+Aceptación de políticas de privacidad
+¡Ya Pueden Ver Todo!
+Acceden y inmediatamente ven:
+👦 Perfil completo de su hijo/hijos
+📅 Calendario con todos los entrenamientos y partidos
+📊 Evaluaciones y progreso deportivo
+💰 Estado de cuotas y pagos
+📞 Contactos directos con entrenadores- POr celular noma
+
+🎯 Flujo 2: "Ana, la Madre de Javier" - Versión Web
+Lunes por la Mañana - Comienza la Semana
+7:30 AM - Rutina Matutina
+🌐 Ana abre su computadora/tablet y accede a la web de la academia:
+
+https://fuchibol.quantify.net.pe
+Pantalla Principal al Ingresar:
+text
+¡Buenos días, Ana! 👋
+
+HOY - LUNES 15 ENERO
+───────────────────────
+⚽ ENTRENAMIENTO DE JAVIER
+🕕 18:00 - 19:30 | Campo Norte
+🎯 Objetivo: Mejora de técnica de pase y control
+📦 Material necesario: Botellas de agua, espinilleras
+
+PRÓXIMOS EVENTOS
+───────────────────────
+🗓️ Miércoles 17: Entrenamiento 18:00
+🗓️ Sábado 20: Partido vs. Ciudad Deportiva
+Ana hace clic en "Ver detalles del entrenamiento":
+text
+DETALLES COMPLETOS - ENTRENAMIENTO LUNES
+─────────────────────────────────────────
+OBJETIVOS ESPECÍFICOS:
+✅ Mejorar precisión en pases largos
+✅ Trabajar control orientado
+✅ Ejercicios de transición ofensiva
+
+OBSERVACIONES DEL ENTRENADOR:
+"Trabajaremos específicamente en la pierna no dominante"
+
+MATERIAL REQUERIDO:
+🔹 Botellas de agua (mínimo 1L)
+🔹 Espinilleras obligatorias
+🔹 Ropa de abrigo (entrenamos al aire libre)
+Durante el Entrenamiento - Seguimiento en Tiempo Real
+6:15 PM - Ana consulta desde casa/oficina
+🌐 Actualiza la página web y ve:
+
+text
+ESTADO ACTUAL - ENTRENAMIENTO EN CURSO
+──────────────────────────────────────
+⏱️ Tiempo transcurrido: 20 minutos
+👥 Asistencia confirmada: 14/16 jugadores
+✅ JAVIER: PRESENTE (llegada: 17:55)
+👤 Entrenador a cargo: Carlos López
+
+EJERCICIOS PROGRAMADOS:
+▰▰▰▰▱ Calentamiento (completado)
+▰▰▰▱▱ Rondo técnico (en curso)
+▱▱▱▱▱ Partido posicional (pendiente)
+Al Finalizar el Entrenamiento
+8:00 PM - Ana revisa el resumen
+🌐 Al acceder a la web ve en la página principal:
+
+text
+🏁 ENTRENAMIENTO COMPLETADO HOY
+───────────────────────────────
+⏱️ Duración total: 105 minutos
+💪 Intensidad: Media-Alta
+⭐ Valoración: Muy positiva
+📊 Ejercicios realizados: 6/6
+Hace clic en "Ver reporte completo":
+text
+REPORTE DETALLADO - ENTRENAMIENTO
+─────────────────────────────────
+ASISTENCIA: ✅ PRESENTE (17:55)
+DURACIÓN REAL: 105 minutos
+CARGA DE TRABAJO: Media-Alta
+
+OBSERVACIONES DEL ENTRENADOR CARLOS:
+"Javier mostró buena actitud y mejora notable 
+en pases con pierna izquierda. Mantener el trabajo."
+
+EJERCICIOS REALIZADOS:
+✓ Calentamiento dinámico - 15 min
+✓ Rondo 4v2 - 20 min  
+✓ Pases en movimiento - 25 min
+✓ Partido posicional - 30 min
+✓ Finalización - 10 min
+✓ Vuelta a la calma - 5 min
+Viernes - Preparación para el Partido
+9:00 AM - Ana planifica el fin de semana
+🌐 Accede a la sección "Calendario":
+
+text
+CALENDARIO FAMILIAR - SEMANA 15-21 ENERO
+─────────────────────────────────────────
+
+SÁBADO 20 ENERO
+⚽ PARTIDO DE LIGA
+🕚 11:00 - 12:30
+🆚 Juvenil A vs. Ciudad Deportiva
+📍 Campo Municipal Los Olivos
+   C/ Deportes, 23
+   
+INFORMACIÓN COMPLETA:
+─────────────────────
+👕 Uniforme: Equipación oficial completa
+⏰ Llegada jugadores: 10:15
+🚗 Aparcamiento: Zona azul gratuita
+🍽️ Comida equipo: 14:00 (opcional)
+📞 Contacto: Carlos - 600 123 456
+🌦️ Previsión meteorológica: Soleado, 18°C
+Viernes por la Tarde - Confirmación de Asistencia
+Ana hace clic en "Confirmar asistencia":
+
+text
+CONFIRMAR ASISTENCIA AL PARTIDO
+───────────────────────────────
+Jugador: Javier Rodríguez
+Partido: Sábado 20 Enero - 11:00
+
+¿Javier asistirá al partido?
+○ SÍ, estará presente (llegada: 10:15)
+○ NO, no podrá asistir (especificar motivo)
+
+[🔄 Guardar confirmación]
+Gestión de Pagos - Sistema Web Actual
+Día 1 del Mes - Ana revisa sus cuotas
+🌐 Accede a la sección "Pagos y Cuotas":
+
+text
+ESTADO DE CUOTAS - JAVIER RODRÍGUEZ
+───────────────────────────────────
+
+CUOTA ACTUAL:
+🟡 PENDIENTE DE PAGO
+💰 Enero 2024 - €60
+🗓️ Vence: 5 de Enero de 2024
+
+HISTORIAL DE PAGOS:
+───────────────────
+🟢 Diciembre 2023 - PAGADA
+   📅 05/12/2023 | 💰 €60 | 🧾 Efectivo
+
+🟢 Noviembre 2023 - PAGADA  
+   📅 03/11/2023 | 💰 €60 | 🧾 Transferencia
+
+🟢 Octubre 2023 - PAGADA
+   📅 04/10/2023 | 💰 €60 | 🧾 Efectivo
+Proceso de Pago Actual (Versión Web):
+Ana ve el estado "Pendiente" en su panel web
+
+Realiza el pago según su método habitual:
+
+💰 Efectivo en la oficina de la academia
+
+📲 Transferencia bancaria a la cuenta del club
+
+El administrador marca la cuota como pagada en el sistema
+
+Automáticamente el estado cambia en la web de Ana
+
+Ana ve la actualización:
+
+text
+✅ CUOTA PAGADA - ENERO 2024
+─────────────────────────────
+📅 Fecha de pago: 3 de Enero 2024
+💰 Importe: €60
+🧾 Método: Efectivo
+👤 Registrado por: Administración
+Funcionalidades Web que Ana Utiliza Diariamente
+📊 Panel Principal Personalizado:
+
+
+MIS HIJOS EN LA ACADEMIA
+────────────────────────
+👦 JAVIER RODRÍGUEZ - Juvenil A
+👧 MARÍA RODRÍGUEZ - Infantil B
+
+PRÓXIMOS EVENTOS (Hoy)
+──────────────────────
+⚽ Entrenamiento Javier - 18:00
+⚽ Entrenamiento María - 17:30
+
+ACCESOS RÁPIDOS
+───────────────
+[📅 Calendario Familiar] [💳 Estado de Cuotas]
+[📊 Evolución Deportiva] [✉️ Contactar Entrenador]
+📅 Calendario Familiar Web:
+Vista mensual con todos los eventos de sus hijos
+
+Filtros por hijo o por tipo de actividad
+
+Recordatorios visuales (colores por tipo de evento)
+
+
+
+
+🔍 Seguimiento Deportivo:
+EVOLUCIÓN DE JAVIER - TEMPORADA 2024
+─────────────────────────────────────
+
+ÚLTIMAS EVALUACIONES:
+⭐ Técnica de pase: 8/10 (↑ +1)
+⭐ Control orientado: 7/10 (↑ +2) 
+⭐ Actitud en equipo: 9/10 (→)
+
+PRÓXIMAS EVALUACIONES:
+📅 Evaluación trimestral: 30 de Enero
+Rutina Semanal Típica de Ana en la Web
+Lunes-Viernes:
+🌅 Mañanas: Revisa calendario del día
+
+🕛 Mediodía: Confirma asistencias si es necesario
+
+🏃 Tardes: Consulta resúmenes de entrenamientos
+
+Fin de Semana:
+📋 Viernes: Planifica partidos del fin de semana
+
+📊 Domingo: Revisa estadísticas y evaluaciones
+
+Inicio de Mes:
+💳 Días 1-5: Verifica estado de cuotas
+
+📞 Si hay dudas: Llamar a la academia
+
+
+
+🎯 Flujo 3: "Roberto, el Entrenador del Juvenil A"
+
+Planificación Semanal
+Domingo por la Tarde
+
+Revisar Calendario
+
+Ve la semana completa: 3 entrenamientos + 1 partido
+
+Consulta disponibilidad de jugadores por lesiones/suspensiones
+
+Preparar Sesiones
+
+Usa plantillas de sesiones anteriores como base
+
+Selecciona ejercicios de la biblioteca: "Técnica de pase", "Transiciones defensivas"
+
+Asigna objetivos específicos para cada sesión
+
+Día de Entrenamiento Típico
+30 Minutos Antes
+
+Revisa la sesión planificada en tablet/móvil
+
+Confirma materiales necesarios: "15 conos, 10 petos, 20 balones"
+
+Inicio de Sesión
+
+Marca asistencia rápida: toca foto de cada jugador presente
+
+El sistema registra automáticamente hora de llegada
+
+Durante el Entrenamiento
+
+En pausas breves, registra observaciones específicas:
+
+"Miguel: mejora en pase largo ⭐"
+
+"Carlos: atención en posicionamiento defensivo 📝"
+
+Ejercicio de Tiro - Evaluación Rápida
+
+Usa tablet para registrar valoraciones en tiempo real:
+
+"Precisión: 8/10"
+
+"Potencia: 7/10"
+
+"Comentario: buen trabajo de pierna no dominante"
+
+Al Finalizar
+
+Completa datos de carga: "Intensidad percibida por jugadores: 7/10"
+
+Añade resumen general: "Buena actitud, progreso en finalización"
+
+El sistema genera automáticamente el reporte
+
+Seguimiento de Jugadores
+Reunión con Padres
+
+Muestra gráficos de evolución del jugador
+
+Comparte estadísticas objetivas de rendimiento
+
+Entrega reportes profesionales automáticamente
+
+Preparación de Partidos
+
+Diseña alineaciones arrastrando jugadores en formación táctico
+
+Comparte convocatorias automáticamente con padres
+
+Registra instrucciones específicas por jugador
+
+
+🎯 Beneficios Tangibles que Experimentarás
+
+Para la Academia 
+Ahorro de tiempo: 10 horas semanales en gestión administrativa
+
+Comunicación perfecta: Cero llamadas preguntando horarios
+
+Profesionalización: Reportes para todo
+
+Crecimiento controlado: Gestión simplificada 
+
+Para los Padres 
+Tranquilidad: Saben dónde, cuándo y qué hace su hijo siempre
+
+Involucramiento: Ven el progreso real, no solo resultados
+
+Planificación familiar: Calendario consolidado de todos los hijos
+
+Para Entrenadores 
+
+Enfoque en lo importante: Más tiempo entrenando, menos administrando
+
+Herramientas profesionales: Análisis y seguimiento como equipos élite
+
+Comunicación efectiva: Mensajes dirigidos a quien corresponde
+
+Evolución medible: Puede demostrar su impacto en el desarrollo
+
+
+
+3. Estructura de datos:
+Módulo 1: Core (Usuarios y Jugadores)
+-Tenant:
+id_tenant (PK)
+nombre_academia
+configuracion_json
+fecha_creacion (DATETIME)
+activo (Booleano)
+-Roles:
+id_rol (PK)
+id_tenant (FK -> Tenant)
+nombre_rol (ej. "Admin", "Entrenador", "Padre", "Jugador")
+UNIQUE(id_tenant, nombre_rol)
+-Usuarios:
+id_usuario (PK)
+id_tenant (FK -> Tenant)
+id_rol (FK -> Roles)
+dni
+password_hash
+nombre_completo
+email
+telefono
+fecha_registro
+is_active (Booleano)
+UNIQUE(id_tenant, dni)
+-Equipos:
+id_equipo (PK)
+id_tenant (FK -> Tenant)
+nombre
+es_propio (Booleano)
+fecha_creacion (DATETIME)
+categoria (VARCHAR)
+descripcion (TEXT)
+activo (Booleano)
+
+-Posiciones:
+id_posicion (PK)
+id_tenant (FK -> Tenant)
+nombre_largo
+abreviatura
+area_campo
+descripcion (TEXT)
+orden (INT)
+
+-Jugadores:
+id_jugador (PK)
+id_tenant (FK -> Tenant)
+id_equipo (FK -> Equipos)
+id_usuario_padre (FK -> Usuarios, NULLABLE)  -- Referencia al usuario padre/madre/tutor
+id_posicion_principal (FK -> Posiciones)
+id_posicion_secundaria (FK -> Posiciones, NULLABLE)
+nombre
+apellido
+fecha_nacimiento
+altura_cm
+peso_kg
+foto_perfil_url
+dni
+datos_contacto_emergencia
+estado_pago (ENUM: "AlDia", "Pendiente", "DesactivadoPorCuota")
+es_mayor_edad (Booleano)  -- Determina si puede tener su propia cuenta
+nro_camiseta (INT)
+fecha_registro (DATETIME)
+activo (Booleano)
+pie_preferido (VARCHAR, NULLABLE)
+UNIQUE(id_equipo, nro_camiseta)
+
+
+📋 Módulo 2: Planificación (Tareas)
+-Tipos_Tarea:
+id_tipo_tarea (PK)
+id_tenant (FK -> Tenant)  -- Tipos de tarea por academia
+nombre (ej. "Técnica", "Física", "Táctica")
+descripcion
+color_hex (para UI)
+UNIQUE(id_tenant, nombre)  -- Nombre único por tenant
+
+-Inventario:
+id_material (PK)
+id_tenant (FK -> Tenant)  -- Material por academia
+nombre_material (ej. "Conos", "Balones Talla 5")
+cantidad_total
+cantidad_disponible
+estado (ej. "Disponible", "En Mantenimiento", "Baja")
+
+-Biblioteca_Tareas:
+id_tarea_biblioteca (PK)
+id_tenant (FK -> Tenant)  -- Biblioteca de tareas por tenant
+id_tipo_tarea (FK -> Tipos_Tarea)
+nombre_tarea
+descripcion
+duracion_estimada_min
+dificultad (ej. "Baja", "Media", "Alta")
+es_publica (Booleano)  -- Si otros entrenadores del tenant pueden verla
+id_usuario_creador (FK -> Usuarios)  -- Quién creó la tarea
+
+-Tareas_Material:
+id_tarea_biblioteca (PK, FK -> Biblioteca_Tareas)
+id_material (PK, FK -> Inventario)
+cantidad_requerida
+
+
+📈 Módulo 3: Evaluación (Modelo EAV)
+-Biblioteca_Atributos** (Define el "Atributo")
+id_atributo (PK)
+id_tenant (FK -> Tenant)  -- Atributos personalizables por academia
+nombre (ej. "Velocidad", "Pase Corto", "Decisión")
+tipo (ej. "Físico", "Técnico", "Mental")
+escala_valor (ej. "Numérica 1-10", "Letras A-F", "Texto Libre")
+valor_minimo
+valor_maximo
+unidad_medida (ej. "segundos", "metros", "puntos")
+
+-Atributos_Evaluacion** (Define la "Entidad")
+id_evaluacion (PK)
+id_tenant (FK -> Tenant)  -- Segregación de evaluaciones
+id_jugador (FK -> Jugadores)
+id_usuario_evaluador (FK -> Usuarios)  -- El coach que evaluó
+fecha_evaluacion
+tipo_evaluacion (ej. "Inicial", "Periódica", "Final")
+comentarios_generales
+estado (ej. "Borrador", "Completada")
+
+-Evaluacion_Detalle** (Define el "Valor")
+id_evaluacion_detalle (PK)
+id_evaluacion (FK -> Atributos_Evaluacion)
+id_atributo (FK -> Biblioteca_Atributos)
+valor_numerico (NULLABLE)  -- Para valores numéricos
+valor_texto (NULLABLE)     -- Para valores de texto/letras
+comentarios
+
+
+
+📅 Módulo 4: Sesiones y Seguimiento Diario
+-Sesiones:
+id_sesion (PK)
+id_tenant (FK -> Tenant)
+tipo_sesion (Enum: "Entrenamiento", "Partido", "Fisioterapia", "Teórica")
+id_equipo (FK -> Equipos)
+id_template_origen (FK -> Sesiones, NULLABLE)  -- Si se creó desde plantilla
+fecha_hora_inicio
+fecha_hora_fin
+lugar
+descripcion
+objetivos
+estado (Enum: "Planificada", "En Curso", "Completada", "Cancelada")
+id_usuario_creador (FK -> Usuarios)
+id_usuario_responsable_actual (FK -> Usuarios)
+fecha_ultima_delegacion (DATETIME)
+es_template (Booleano)  -- TRUE si es una plantilla reutilizable
+categoria_template (Enum: "Técnica", "Táctica", "Física", "Integral", "Partido")  -- Para filtrar plantillas
+nivel_dificultad (Enum: "Principiante", "Intermedio", "Avanzado")
+duracion_total_min (INT)  -- Duración calculada automáticamente
+
+
+-Tareas_Sesion (Unión de Sesión y Tarea)
+id_tarea_sesion (PK)
+id_sesion (FK -> Sesiones)
+id_tarea_biblioteca (FK -> Biblioteca_Tareas)
+orden
+duracion_estimada_min
+duracion_realizada_min (NULLABLE)
+notas_coach
+estado (Enum: "Pendiente", "En Progreso", "Completada", "Saltada")
+es_opcional (Booleano)  -- Para tareas que se pueden omitir
+material_improvisado (TEXT)  -- Si no hay material de biblioteca, se describe aquí
+
+
+
+-Asistencias
+id_asistencia (PK)
+id_sesion (FK -> Sesiones)
+id_jugador (FK -> Jugadores)
+estado (Enum: "Presente", "Ausente", "Justificado", "Tardanza")
+hora_llegada (NULLABLE)
+notas
+UNIQUE(id_sesion, id_jugador)
+
+
+-Cargas_Jugador
+id_carga (PK)
+id_sesion (FK -> Sesiones)
+id_jugador (FK -> Jugadores)
+duracion_minutos_real
+rpe_subjetivo (1-10)
+distancia_total_km (NULLABLE)
+pulsaciones_medias (NULLABLE)
+carga_calculada (NULLABLE)  -- duracion * rpe
+UNIQUE(id_sesion, id_jugador)
+-Delegaciones_sesion
+   id_delegacion (PK)
+id_sesion (FK -> Sesiones)
+id_usuario_origen (FK -> Usuarios)
+id_usuario_destino (FK -> Usuarios)
+fecha_delegacion
+motivo (TEXT)
+estado (Enum: "Activa", "Aceptada", "Rechazada", "Expirada")
+permisos_otorgados (JSON)  -- {"modificar_tareas": true, "registrar_asistencias": true, "registrar_cargas": true, "delegar_otra_vez": false}
+fecha_limite_aceptacion (DATETIME)  -- Para que no quede pendiente forever
+-Sesiones_Entrenadores_Asignados
+   id_asignacion (PK)
+id_sesion (FK -> Sesiones)
+id_usuario_entrenador (FK -> Usuarios)
+rol (Enum: "Responsable", "Co-Entrenador", "Asistente", "Observador")
+fecha_asignacion
+permisos_automaticos (JSON)  -- Se generan según el rol
+
+
+
+⚽ Módulo 5: Partidos y Estadísticas
+-Partidos-
+id_partido (PK)
+id_tenant (FK -> Tenant)
+id_sesion (FK -> Sesiones, UNIQUE)  -- Relación 1 a 1 con sesión
+id_equipo_local (FK -> Equipos)
+id_equipo_visitante (FK -> Equipos)
+id_competencia (FK -> Competencias, NULLABLE)  -- Nueva tabla para torneos/ligas
+jornada_numero (INT)  -- Número de jornada en la competencia
+goles_local (INT, DEFAULT 0)
+goles_visitante (INT, DEFAULT 0)
+resultado_final (VARCHAR(10))  -- "3-1", "0-0", "2-2"
+competencia (Enum: "Liga", "Amistoso", "Torneo", "Copa", "Playoff")
+fase (VARCHAR(50))  -- "Fase Grupos", "Cuartos", "Semifinal", "Final"
+arbitro_principal (VARCHAR(100))
+arbitro_asistente_1 (VARCHAR(100))
+arbitro_asistente_2 (VARCHAR(100))
+estado_partido (Enum: "Programado", "En_Juego", "Medio_Tiempo", "Finalizado", "Suspendido", "Aplazado")
+minuto_actual (INT, DEFAULT 0)  -- Para partidos en juego
+condiciones_climaticas (Enum: "Despejado", "Lluvia", "Nieve", "Viento", "Calor")
+asistencia_publico (INT)  -- Cantidad de espectadores
+incidencias (TEXT)  -- Lesiones graves, expulsiones, etc.
+
+-Competencias:
+id_competencia (PK)
+id_tenant (FK -> Tenant)
+nombre (VARCHAR(100))  -- "Liga Regional Sub-15", "Copa Primavera"
+tipo (Enum: "Liga", "Torneo", "Copa")
+temporada (VARCHAR(20))  -- "2024-2025", "Verano 2024"
+fecha_inicio (DATE)
+fecha_fin (DATE)
+max_jornadas (INT)  -- Para ligas
+sistema_puntos (JSON)  -- {"gana": 3, "empata": 1, "pierde": 0}
+estado (Enum: "Planificada", "En_Curso", "Finalizada", "Cancelada")
+
+
+
+-Estadisticas_Jugador_Partido
+id_stat (PK)
+id_partido (FK -> Partidos)
+id_jugador (FK -> Jugadores)
+es_titular (Booleano)
+minuto_entrada (INT, NULLABLE)  -- Minuto en que entró (si fue suplente)
+minuto_salida (INT, NULLABLE)   -- Minuto en que salió
+minutos_jugados (INT)
+goles (INT, DEFAULT 0)
+asistencias (INT, DEFAULT 0)
+tarjetas_amarillas (INT, DEFAULT 0)
+tarjetas_rojas (INT, DEFAULT 0)
+remates (INT, DEFAULT 0)
+remates_a_puerta (INT, DEFAULT 0)
+faltas_cometidas (INT, DEFAULT 0)
+faltas_recibidas (INT, DEFAULT 0)
+offsides (INT, DEFAULT 0)
+penaltis_cometidos (INT, DEFAULT 0)
+penaltis_recibidos (INT, DEFAULT 0)
+recuperaciones (INT, DEFAULT 0)  -- Balones recuperados
+pases_completados (INT, DEFAULT 0)
+pases_totales (INT, DEFAULT 0)
+porcentaje_pases (DECIMAL(5,2))  -- Calculado: pases_completados/pases_totales*100
+valoracion_entrenador (INT, NULLABLE)  -- 1-10
+comentarios_rendimiento (TEXT)
+UNIQUE(id_partido, id_jugador)
+
+-Eventos_partido
+id_evento (PK)
+id_partido (FK -> Partidos)
+minuto (INT)
+tipo_evento (Enum: "Gol", "Tarjeta_Amarilla", "Tarjeta_Roja", "Cambio", "Penalti", "Gol_Penalti", "Falta", "Incidencia")
+id_jugador_principal (FK -> Jugadores, NULLABLE)  -- Jugador que hace el evento
+id_jugador_secundario (FK -> Jugadores, NULLABLE)  -- Jugador afectado (en asistencias, faltas)
+equipo (Enum: "Local", "Visitante")
+descripcion (TEXT)  -- "Gol de cabeza", "Falta dura", "Cambio táctico"
+es_decisivo (Booleano)  -- Gol decisivo, expulsión clave, etc.
+
+
+-Plantillas_Alineacion
+id_plantilla (PK)
+id_tenant (FK -> Tenant)
+nombre_plantilla (VARCHAR(100))  -- "4-4-2 Defensivo", "4-3-3 Ofensivo"
+formacion (VARCHAR(10))  -- "4-4-2", "4-3-3", "3-5-2"
+posiciones_json (JSON)  -- [{posicion: "POR", x: 50, y: 5}, {posicion: "DFC", x: 50, y: 25}...]
+descripcion (TEXT)
+es_publica (Booleano)
+id_usuario_creador (FK -> Usuarios)
+fecha_creacion (DATETIME)
+veces_utilizada (INT, DEFAULT 0)  -- Contador de uso
+categoria (Enum: "Defensiva", "Ofensiva", "Equilibrada", "Contraataque")
+
+
+-Alineaciones
+id_alineacion (PK)
+id_partido (FK -> Partidos)
+id_jugador (FK -> Jugadores)
+rol (Enum: "Titular", "Suplente", "No_Convocado")
+posicion_campo (VARCHAR(10))  -- "POR", "DFC", "LD", "LI", "MCD", "MC", "MCO", "SD", "DC"
+posicion_x (INT)  -- 0-100
+posicion_y (INT)  -- 0-100
+numero_camiseta (INT, NULLABLE)
+capitan (Booleano, DEFAULT FALSE)
+minutos_previstos (INT, NULLABLE)  -- Minutos que se espera que juegue
+instrucciones_especiales (TEXT)  -- "Marcaje hombre a hombre", "Presión alta"
+UNIQUE(id_partido, id_jugador)
+
+💰 Módulo 6: Finanzas y Notificaciones
+-Cuotas:
+id_cuota (PK)
+id_tenant (FK -> Tenant)
+id_jugador (FK -> Jugadores)
+concepto (VARCHAR)
+monto (DECIMAL)
+fecha_vencimiento (DATE)
+estado (ENUM: "Pendiente", "Pagada", "Vencida", "Anulada")
+fecha_creacion (DATETIME)
+fecha_pago (DATETIME, NULLABLE)
+metodo_pago (VARCHAR, NULLABLE)
+referencia_pago (VARCHAR, NULLABLE)
+
+-Alertas_Cuota:
+id_alerta (PK)
+id_tenant (FK -> Tenant)
+id_cuota (FK -> Cuota)
+tipo_alerta (ENUM: "Vencida", "ProximaVencimiento")
+fecha_generacion (DATETIME)
+vista_admin (BOOLEAN, DEFAULT FALSE)
+vista_padre (BOOLEAN, DEFAULT FALSE)
+estado_jugador_al_alertar (ENUM: "Activo", "DesactivadoPorCuota", "Otro")
+
+
+
+3. Endpoints REST (multi-tenant)
+### Módulo 0: Autenticación y Rutas Internas
+
+**1. Autenticación de Usuarios**
+*   `POST /api/auth/login`: Iniciar sesión con DNI y contraseña para obtener un token JWT.
+*   `POST /api/auth/refresh-token`: Obtener un nuevo token de acceso usando un token de refresco.
+*   `POST /api/auth/logout`: Cerrar sesión (invalidar token si aplica).
+*   `POST /api/auth/forgot-password`: Solicitar un enlace para restablecer la contraseña (se envía al email).
+*   `POST /api/auth/reset-password`: Restablecer la contraseña usando el token recibido por email.
+
+**2. Rutas Internas (Administración del Sistema)**
+*   `POST /api/internal/admin-setup`: Configurar un usuario administrador inicial para un tenant. (Protegido por clave API interna).
+*   `POST /api/internal/roles`: Crear un nuevo rol para un tenant específico. (Protegido por clave API interna).
+
+---
+
+### Módulo 1: Gestión de Usuarios y Jugadores
+
+**1. Creación y Gestión de Academias (Tenants)**
+*   `POST /api/tenants`: Crear una nueva academia.
+*   `GET /api/tenants/{id}`: Obtener detalles de una academia.
+*   `PUT /api/tenants/{id}/status`: Activar/desactivar una academia.
+
+**2. Administración de Roles y Permisos**
+*   `GET /api/roles`: Listar roles disponibles.
+*   `POST /api/roles`: Crear un nuevo rol.
+*   `PUT /api/roles/{id}`: Actualizar un rol.
+*   `DELETE /api/roles/{id}`: Eliminar un rol.
+
+**3. Gestión de Cuentas de Usuario**
+*   `POST /api/users`: Crear una nueva cuenta de usuario.
+*   `GET /api/users/{id}`: Obtener detalles de un usuario.
+*   `GET /api/users?roleId={id}&tenantId={id}&dni={dni}`: Listar usuarios con filtros.
+*   `PUT /api/users/{id}`: Actualizar datos de un usuario.
+*   `PUT /api/users/{id}/status`: Activar/desactivar un usuario.
+
+**4. Organización de Equipos**
+*   `POST /api/teams`: Crear un nuevo equipo.
+*   `GET /api/teams/{id}`: Obtener detalles de un equipo.
+*   `GET /api/teams?tenantId={id}&category={category}`: Listar equipos con filtros.
+*   `PUT /api/teams/{id}`: Actualizar un equipo.
+*   `PUT /api/teams/{id}/status`: Activar/desactivar un equipo.
+
+**5. Definición de Posiciones de Juego**
+*   `POST /api/positions`: Crear una nueva posición.
+*   `GET /api/positions/{id}`: Obtener detalles de una posición.
+*   `GET /api/positions?tenantId={id}&area={area}`: Listar posiciones con filtros.
+*   `PUT /api/positions/{id}`: Actualizar una posición.
+*   `DELETE /api/positions/{id}`: Eliminar una posición.
+
+**6. Ficha Completa de Jugadores**
+*   `POST /api/players`: Crear un nuevo jugador.
+*   `GET /api/players/{id}`: Obtener detalles de un jugador (incluye datos personales, equipo, posiciones, padre).
+*   `GET /api/players?teamId={id}&positionId={id}&name={name}&dni={dni}`: Buscar y filtrar jugadores.
+*   `PUT /api/players/{id}`: Actualizar datos de un jugador.
+*   `PUT /api/players/{id}/status`: Activar/desactivar un jugador.
+*   `GET /api/players/{id}/dashboard`: Obtener un resumen completo del jugador (ficha única).
+
+---
+
+### Módulo 2: Planificación de Tareas y Recursos
+
+**1. Clasificación de Actividades (Tipos de Tarea)**
+*   `POST /api/task-types`: Crear un nuevo tipo de tarea.
+*   `GET /api/task-types/{id}`: Obtener detalles de un tipo de tarea.
+*   `GET /api/task-types?tenantId={id}`: Listar tipos de tarea.
+*   `PUT /api/task-types/{id}`: Actualizar un tipo de tarea.
+*   `DELETE /api/task-types/{id}`: Eliminar un tipo de tarea.
+
+**2. Control de Inventario de Material Deportivo**
+*   `POST /api/inventory`: Registrar nuevo material.
+*   `GET /api/inventory/{id}`: Obtener detalles de un material.
+*   `GET /api/inventory?tenantId={id}&status={status}`: Listar material con filtros.
+*   `PUT /api/inventory/{id}`: Actualizar material (ej. cantidad, estado).
+*   `DELETE /api/inventory/{id}`: Eliminar material.
+
+**3. Biblioteca de Ejercicios y Tareas Reutilizables**
+*   `POST /api/tasks/library`: Crear una nueva tarea en la biblioteca.
+*   `GET /api/tasks/library/{id}`: Obtener detalles de una tarea de la biblioteca.
+*   `GET /api/tasks/library?taskTypeId={id}&difficulty={level}&creatorId={id}&isPublic={boolean}`: Listar tareas de la biblioteca con filtros.
+*   `PUT /api/tasks/library/{id}`: Actualizar una tarea de la biblioteca.
+*   `DELETE /api/tasks/library/{id}`: Eliminar una tarea de la biblioteca.
+
+---
+
+### Módulo 3: Evaluación de Jugadores
+
+**1. Definición Personalizada de Criterios de Evaluación (Atributos)**
+*   `POST /api/attributes`: Crear un nuevo atributo de evaluación.
+*   `GET /api/attributes/{id}`: Obtener detalles de un atributo.
+*   `GET /api/attributes?tenantId={id}&type={type}`: Listar atributos con filtros.
+*   `PUT /api/attributes/{id}`: Actualizar un atributo.
+*   `DELETE /api/attributes/{id}`: Eliminar un atributo.
+
+**2. Registro Detallado de Evaluaciones**
+*   `POST /api/players/{playerId}/evaluations`: Crear una nueva evaluación para un jugador.
+*   `GET /api/players/{playerId}/evaluations/{evaluationId}`: Obtener detalles de una evaluación específica.
+*   `GET /api/players/{playerId}/evaluations?evaluatorId={id}&type={type}`: Listar evaluaciones de un jugador con filtros.
+*   `PUT /api/players/{playerId}/evaluations/{evaluationId}`: Actualizar una evaluación.
+*   `DELETE /api/players/{playerId}/evaluations/{evaluationId}`: Eliminar una evaluación.
+*   `GET /api/players/{playerId}/evaluation-dashboard`: Obtener datos para el dashboard de evolución de atributos.
+
+---
+
+### Módulo 4: Sesiones y Seguimiento Diario
+
+**1. Creación y Gestión de Sesiones de Entrenamiento/Partido**
+*   `POST /api/sessions`: Crear una nueva sesión.
+*   `GET /api/sessions/{id}`: Obtener detalles de una sesión.
+*   `GET /api/sessions?teamId={id}&type={type}&status={status}`: Listar sesiones con filtros.
+*   `PUT /api/sessions/{id}`: Actualizar una sesión.
+*   `DELETE /api/sessions/{id}`: Eliminar una sesión.
+*   `POST /api/sessions/{id}/duplicate`: Duplicar una sesión existente (usar como plantilla).
+
+**2. Organización de Tareas en la Sesión**
+*   `POST /api/sessions/{sessionId}/tasks`: Asignar una tarea de la biblioteca a una sesión.
+*   `GET /api/sessions/{sessionId}/tasks`: Listar tareas asignadas a una sesión.
+*   `PUT /api/sessions/{sessionId}/tasks/{sessionTaskId}`: Actualizar detalles de una tarea en sesión.
+*   `DELETE /api/sessions/{sessionId}/tasks/{sessionTaskId}`: Eliminar una tarea de una sesión.
+
+**3. Control de Asistencia Rápido**
+*   `POST /api/sessions/{sessionId}/attendances/batch`: Registrar asistencia de múltiples jugadores.
+*   `GET /api/sessions/{sessionId}/attendances`: Listar asistencias para una sesión.
+*   `PUT /api/sessions/{sessionId}/attendances/{playerId}`: Actualizar asistencia de un jugador.
+*   `POST /api/sessions/{sessionId}/attendances/{playerId}/notify-absence`: Notificar ausencia a padres (acción interna).
+
+**4. Registro de Carga de Jugadores**
+*   `POST /api/sessions/{sessionId}/player-load`: Registrar la carga de un jugador en una sesión.
+*   `GET /api/sessions/{sessionId}/player-load`: Listar cargas de jugadores para una sesión.
+*   `PUT /api/sessions/{sessionId}/player-load/{playerId}`: Actualizar la carga de un jugador.
+*   `GET /api/players/{playerId}/load-history`: Obtener historial de carga para gráficos.
+
+**5. Delegación de Responsabilidades en Sesiones**
+*   `POST /api/sessions/{sessionId}/delegations`: Delegar una sesión a otro entrenador.
+*   `GET /api/sessions/{sessionId}/delegations`: Obtener delegaciones de una sesión.
+*   `PUT /api/delegations/{id}/status`: Aceptar/rechazar una delegación.
+
+**6. Asignación de Entrenadores a Sesiones**
+*   `POST /api/sessions/{sessionId}/coaches`: Asignar entrenadores a una sesión.
+*   `GET /api/sessions/{sessionId}/coaches`: Listar entrenadores asignados a una sesión.
+*   `PUT /api/sessions/{sessionId}/coaches/{userId}`: Actualizar rol de entrenador en sesión.
+*   `DELETE /api/sessions/{sessionId}/coaches/{userId}`: Desasignar entrenador de sesión.
+
+---
+
+### Módulo 5: Partidos y Estadísticas Detalladas
+
+**1. Calendario y Resultados de Partidos**
+*   `POST /api/matches`: Crear un nuevo partido.
+*   `GET /api/matches/{id}`: Obtener detalles de un partido.
+*   `GET /api/matches?teamId={id}&competitionId={id}&status={status}`: Listar partidos con filtros.
+*   `PUT /api/matches/{id}`: Actualizar detalles de un partido (ej. resultado, estado).
+*   `DELETE /api/matches/{id}`: Eliminar un partido.
+
+**2. Gestión de Competencias (Ligas y Torneos)**
+*   `POST /api/competitions`: Crear una nueva competencia.
+*   `GET /api/competitions/{id}`: Obtener detalles de una competencia.
+*   `GET /api/competitions?tenantId={id}&type={type}&season={season}`: Listar competencias con filtros.
+*   `PUT /api/competitions/{id}`: Actualizar una competencia.
+*   `DELETE /api/competitions/{id}`: Eliminar una competencia.
+
+**3. Estadísticas Individuales de Jugador por Partido**
+*   `POST /api/matches/{matchId}/player-stats`: Registrar/actualizar estadísticas de un jugador en un partido.
+*   `GET /api/matches/{matchId}/player-stats`: Listar estadísticas de jugadores para un partido.
+*   `GET /api/players/{playerId}/match-stats-summary`: Obtener resumen de estadísticas de partidos de un jugador.
+
+**4. Registro Cronológico de Eventos del Partido**
+*   `POST /api/matches/{matchId}/events`: Registrar un evento de partido.
+*   `GET /api/matches/{matchId}/events`: Listar eventos de un partido.
+*   `PUT /api/matches/{matchId}/events/{eventId}`: Actualizar un evento.
+*   `DELETE /api/matches/{matchId}/events/{eventId}`: Eliminar un evento.
+
+**5. Plantillas de Alineación Reutilizables**
+*   `POST /api/lineup-templates`: Crear una nueva plantilla de alineación.
+*   `GET /api/lineup-templates/{id}`: Obtener detalles de una plantilla.
+*   `GET /api/lineup-templates?tenantId={id}&category={category}`: Listar plantillas de alineación.
+*   `PUT /api/lineup-templates/{id}`: Actualizar una plantilla.
+*   `DELETE /api/lineup-templates/{id}`: Eliminar una plantilla.
+
+**6. Constructor Gráfico de Alineaciones**
+*   `PUT /api/matches/{matchId}/lineups`: Guardar la alineación completa de un partido.
+*   `GET /api/matches/{matchId}/lineups`: Obtener la alineación de un partido.
+*   `GET /api/matches/{matchId}/squad`: Obtener jugadores disponibles para convocar a un partido.
+
+---
+
+### Módulo 6: Gestión Financiera y Notificaciones
+
+**1. Gestión de Cuotas de Jugadores**
+*   `POST /api/dues`: Crear una nueva cuota.
+*   `GET /api/dues/{id}`: Obtener detalles de una cuota.
+*   `GET /api/dues?playerId={id}&status={status}&concept={concept}`: Listar cuotas con filtros.
+*   `PUT /api/dues/{id}`: Actualizar una cuota (ej. estado de pago).
+*   `DELETE /api/dues/{id}`: Eliminar una cuota.
+*   `GET /api/players/{playerId}/dues-summary`: Obtener resumen de cuotas de un jugador.
+
+**2. Sistema de Alertas de Pago**
+*   `GET /api/dues-alerts?status={status}&type={type}`: Listar alertas de cuotas.
+*   `PUT /api/dues-alerts/{id}/mark-viewed`: Marcar una alerta como vista.
+*   `POST /api/dues/{id}/trigger-alert`: Generar una alerta manual para una cuota.
+
+---
+
+### Módulo 7: Reportes y Dashboards
+
+**1. Dashboards Generales (Datos Agregados)**
+*   `GET /api/dashboards/admin`: Datos clave para el dashboard del administrador (ej. número de academias, usuarios, jugadores, equipos, cuotas pendientes).
+*   `GET /api/dashboards/coach/{coachId}`: Datos clave para el dashboard de un entrenador (ej. sus equipos, próximas sesiones, jugadores a su cargo, resumen de asistencias).
+*   `GET /api/dashboards/parent/{parentId}`: Datos clave para el dashboard de un padre (ej. hijos, próximas actividades, estado de cuotas, últimas evaluaciones).
+
+**2. Reportes de Asistencias**
+*   `GET /api/reports/attendance?tenantId={id}&teamId={id}&sessionId={id}&startDate={date}&endDate={date}`: Generar un reporte de asistencias con filtros por academia, equipo, sesión y rango de fechas.
+*   `GET /api/reports/attendance/export?format={excel|pdf}&...`: Exportar el reporte de asistencias en formato Excel o PDF.
+
+**3. Reportes de Rendimiento (Jugadores)**
+*   `GET /api/reports/performance/players?playerId={id}&startDate={date}&endDate={date}`: Generar un reporte de rendimiento individual de un jugador (estadísticas de partidos, evolución de atributos).
+*   `GET /api/reports/performance/players/export?format={excel|pdf}&...`: Exportar el reporte de rendimiento de jugadores.
+
+**4. Reportes de Carga de Trabajo (Jugadores)**
+*   `GET /api/reports/workload/players?playerId={id}&startDate={date}&endDate={date}`: Generar un reporte de carga de trabajo de jugadores (RPE, duración, distancia).
+*   `GET /api/reports/workload/players/export?format={excel|pdf}&...`: Exportar el reporte de carga de trabajo.
+
+**5. Reportes Financieros**
+*   `GET /api/reports/financial?tenantId={id}&status={status}&startDate={date}&endDate={date}`: Generar un reporte financiero de cuotas (pendientes, pagadas, vencidas).
+*   `GET /api/reports/financial/export?format={excel|pdf}&...`: Exportar el reporte financiero.
+
+**6. Exportaciones Generales**
+*   `GET /api/export/statistics?format={excel|pdf}&...`: Exportar estadísticas generales (ej. de equipos, competencias).
+*   `GET /api/export/players?format={excel|pdf}&...`: Exportar listado de jugadores y sus datos básicos.
+*   `GET /api/export/matches?format={excel|pdf}&...`: Exportar listado de partidos y sus resultados.
+*   `GET /api/export/evaluations?format={excel|pdf}&...`: Exportar evaluaciones de jugadores.
+
+---
+
+### Módulo 8: Endpoints especiales para Padres
+
+**1. Información de Asistencias del Hijo**
+*   `GET /api/parent/children/{childId}/attendance?startDate={date}&endDate={date}`: Obtener el historial de asistencias de un hijo en un rango de fechas.
+
+**2. Evaluaciones del Hijo**
+*   `GET /api/parent/children/{childId}/evaluations`: Obtener las evaluaciones realizadas a un hijo.
+
+**3. Estadísticas del Hijo**
+*   `GET /api/parent/children/{childId}/statistics`: Obtener las estadísticas de partidos de un hijo.
+
+**4. Próximo Partido/Actividad del Hijo**
+*   `GET /api/parent/children/{childId}/next-activity`: Obtener información sobre el próximo partido o sesión de entrenamiento de un hijo.
+
+**5. Calendario Familiar (Nuevo)**
+*   `GET /api/parent/calendar?startDate={date}&endDate={date}`: Obtener un calendario consolidado con todas las actividades (sesiones, partidos) de los hijos asociados al padre, en un rango de fechas.
+
+### Módulo 9: Sistema
+
+**1. Estado de Salud de la Aplicación**
+*   `GET /api/system/health`: Verificar el estado general de la aplicación y sus componentes (base de datos, servicios externos).
+
+**2. Estadísticas del Sistema**
+*   `GET /api/system/stats`: Obtener métricas de rendimiento del sistema (uso de CPU, memoria, número de usuarios activos, etc.).
+
+**3. Gestión de Copias de Seguridad**
+*   `POST /api/system/backup/trigger`: Iniciar manualmente un proceso de copia de seguridad de la base de datos.
+*   `GET /api/system/backup/status`: Obtener el estado de la última copia de seguridad.
+
+

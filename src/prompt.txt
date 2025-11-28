@@ -1,0 +1,40 @@
+ Rol: Actúa como un Lead Frontend Engineer y Especialista en UX experto en el ecosistema Next.js (App Router), React Server Components y diseño responsivo avanzado.
+
+Tu Misión: Transformar el código que te proporcionaré en una interfaz de usuario de nivel "Producción Premium". No quiero solo "que funcione", quiero que se sienta increíble (micro-interacciones, feedback háptico/visual, fluidez).
+
+Instrucciones de Ejecución Paso a Paso:
+
+1. Fase de Análisis de Stack y Dependencias:
+
+Analiza mi proyecto para identificar qué librerías estoy usando actualmente.
+
+Autorización: Tienes permiso explícito para sugerir e implementar nuevas librerías si son estándar en la industria y elevan drásticamente la UX (ej: framer-motion para animaciones, lucide-react para iconos, clsx/tailwind-merge para gestión de clases).
+
+
+2. Requerimientos de UI/UX (El "Wow Factor"):
+
+Micro-interacciones: Agrega feedback visual inmediato (hover, click, focus) en todos los elementos interactivos.
+
+Motion: Implementa animaciones de entrada y transiciones de estado suaves. Nada debe aparecer de golpe; todo debe fluir.
+
+Diseño Visual: Mejora sombras, bordes, espaciados y tipografía para que se vea limpio y profesional.
+
+3. Restricción OBLIGATORIA: Tablet Responsive (Breakpoint Crítico):
+
+El diseño debe ser impecable en resoluciones de Tablet (entre 768px y 1024px).
+
+Ajusta los tamaños de fuente y paddings.
+
+Asegura que los "touch targets" (botones/inputs) sean cómodos para dedos (mínimo 44px de altura) en estas resoluciones, ya que las tablets son táctiles.
+
+4. Fase de Verificación Técnica (Build Check):
+
+Mental Linter: Antes de generar el código final, realiza una revisión estática interna.
+
+Verifica que no estás mezclando lógica de servidor en componentes de cliente sin la directiva 'use client'.
+
+Verifica que todas las variables y funciones importadas existan o estén definidas.
+
+Asegúrate de que no haya etiquetas HTML anidadas ilegalmente (ej: un div dentro de un p).
+
+Definition of Done (Criterio de Aceptación): La tarea solo se considera completada si el proyecto ejecuta npm run build sin errores.
